@@ -1,6 +1,6 @@
 # tg-qa demo #1 — Telebook (Mini App + Telegram Stars)
 
-A worked example of [tg-qa](https://github.com/c-c0rtex/tg-qa) testing a **Telegram
+A worked example of [tg-qa](https://codeberg.org/c-c0rtex/tg-qa) testing a **Telegram
 Mini App** bot end to end: the [Telebook](https://github.com/neSpecc/telebook) hotel-booking
 bot (node-telegram-bot-api + a Vue Mini App), with payments switched to **Telegram Stars**.
 
