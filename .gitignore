@@ -1,0 +1,15 @@
+# Secrets / ephemeral — never commit
+*.session
+*.session-journal
+.env
+**/.env
+.tg-qa/miniapp.bridge.json   # live signed initData (short-lived)
+
+# Runtime run artifacts (curated copies live in sample-reports/)
+.tg-qa/reports/
+
+# The upstream bot checkout is fetched by setup.sh, not vendored
+/telebook/
+
+__pycache__/
+node_modules/

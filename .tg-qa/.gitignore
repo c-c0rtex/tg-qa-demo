@@ -1,0 +1,3 @@
+# tg-qa runtime artifacts (keep bot.context.md, scenarios/, specs/, baseline/ in git)
+reports/
+*.tmp

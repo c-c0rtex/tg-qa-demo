@@ -1,0 +1,73 @@
+{
+  "framework": "node-telegram-bot-api",
+  "source_dir": "/home/mikita/telebook",
+  "mined_by": "deterministic+llm",
+  "commands": [
+    {
+      "command": "/start",
+      "source": "server/src/api/bot.ts:73"
+    },
+    {
+      "command": "/help",
+      "source": "server/src/api/bot.ts:76"
+    }
+  ],
+  "callbacks": [],
+  "keyboards": [
+    {
+      "buttons": [
+        {
+          "text": "🦄 Open {appName}",
+          "web_app": true
+        }
+      ],
+      "source": "server/src/api/bot.ts:87"
+    },
+    {
+      "buttons": [
+        {
+          "text": "🦄 Open {appName}",
+          "web_app": true
+        }
+      ],
+      "source": "server/src/api/bot.ts:115"
+    },
+    {
+      "buttons": [
+        {
+          "text": "🦄 Open {appName}",
+          "web_app": true
+        }
+      ],
+      "source": "server/src/api/bot.ts:135"
+    },
+    {
+      "buttons": [
+        {
+          "text": "🦄 Open {appName}",
+          "web_app": true
+        }
+      ],
+      "source": "server/src/api/bot.ts:155"
+    }
+  ],
+  "replies": [
+    {
+      "text": "*Your order was accepted! Have a nice trip! 🎉* \n\nIt is not a real payment, so you're not charged. The hotel exists only in our imagination. Thanks for testing! \n\nDiscover the source code and documentation: \nhttps://github.com/neSpecc/telebook",
+      "source": "server/src/api/bot.ts:84"
+    },
+    {
+      "text": "Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨",
+      "source": "server/src/api/bot.ts:113"
+    },
+    {
+      "text": "Actually I'm just an example bot, so all I can do is to send you a link to the mini-app 🤖",
+      "source": "server/src/api/bot.ts:133"
+    },
+    {
+      "text": "Click the button below to launch an app",
+      "source": "server/src/api/bot.ts:153"
+    }
+  ],
+  "miniapp": true
+}

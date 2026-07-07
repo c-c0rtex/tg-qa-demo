@@ -1,0 +1,21 @@
+# generated from smoke.md#TC-T6
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T6 --force
+tc: TC-T6
+title: Button on an old /start message remains usable after new activity
+type: passive
+steps:
+- send: /start
+  expect:
+    contains:
+    - Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨
+    snapshot: tc-t6-start-welcome
+    buttons_contain:
+    - 🦄 Open
+- send: /help
+  expect:
+    contains:
+    - Actually I'm just an example bot, so all I can do is to send you a link to the
+      mini-app 🤖
+    snapshot: tc-t6-help-reply
+    buttons_contain:
+    - 🦄 Open

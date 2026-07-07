@@ -1,0 +1,13 @@
+# generated from smoke.md#TC-T5
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T5 --force
+tc: TC-T5
+title: Unknown command falls back to app launch prompt
+type: passive
+steps:
+- send: /book
+  expect:
+    contains:
+    - Click the button below to launch an app
+    snapshot: tc-t5-fallback
+    buttons_contain:
+    - 🦄 Open

@@ -1,0 +1,13 @@
+# generated from smoke.md#TC-T1
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T1 --force
+tc: TC-T1
+title: /start shows welcome text with Mini App button
+type: passive
+steps:
+- send: /start
+  expect:
+    contains:
+    - Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨
+    snapshot: tc-t1-welcome
+    buttons_contain:
+    - 🦄 Open

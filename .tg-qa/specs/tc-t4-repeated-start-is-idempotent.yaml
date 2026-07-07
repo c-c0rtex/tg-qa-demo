@@ -1,0 +1,20 @@
+# generated from smoke.md#TC-T4
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T4 --force
+tc: TC-T4
+title: Repeated /start is idempotent
+type: passive
+steps:
+- send: /start
+  expect:
+    contains:
+    - Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨
+    snapshot: tc-t4-welcome-first
+    buttons_contain:
+    - 🦄 Open
+- send: /start
+  expect:
+    contains:
+    - Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨
+    snapshot: tc-t4-welcome-second
+    buttons_contain:
+    - 🦄 Open

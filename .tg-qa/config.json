@@ -1,0 +1,13 @@
+{
+  "bot": "@tgqa_telebook_demo_bot",
+  "bot_source_dir": "/home/mikita/telebook",
+  "bot_framework": null,
+  "language": "English",
+  "reply_timeout": 15,
+  "send_delay": 1.5,
+  "text_masks": null,
+  "fixture_cmd": null,
+  "fixture_teardown_cmd": null,
+  "context_notes": null,
+  "miniapp_url": null
+}

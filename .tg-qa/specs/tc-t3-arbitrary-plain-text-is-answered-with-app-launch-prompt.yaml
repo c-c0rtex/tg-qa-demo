@@ -1,0 +1,13 @@
+# generated from smoke.md#TC-T3
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T3 --force
+tc: TC-T3
+title: Arbitrary plain text is answered with app launch prompt
+type: mutating
+steps:
+- send: hello, can you book me a room?
+  expect:
+    contains:
+    - Click the button below to launch an app
+    snapshot: tc-t3-app-launch-prompt
+    buttons_contain:
+    - 🦄 Open

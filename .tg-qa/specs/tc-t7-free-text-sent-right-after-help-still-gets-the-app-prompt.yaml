@@ -1,0 +1,21 @@
+# generated from smoke.md#TC-T7
+# regenerate: tg-qa-spec-gen --scenario smoke.md --tc TC-T7 --force
+tc: TC-T7
+title: Free text sent right after /help still gets the app prompt
+type: mutating
+steps:
+- send: /help
+  expect:
+    contains:
+    - Actually I'm just an example bot, so all I can do is to send you a link to the
+      mini-app 🤖
+    snapshot: tc-t7-help-reply
+    buttons_contain:
+    - 🦄 Open
+- send: random text 12345 !@#
+  expect:
+    contains:
+    - Click the button below to launch an app
+    snapshot: tc-t7-launch-prompt
+    buttons_contain:
+    - 🦄 Open
