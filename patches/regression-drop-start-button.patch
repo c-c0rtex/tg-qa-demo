@@ -1,0 +1,22 @@
+--- a/server/src/api/bot.ts
++++ b/server/src/api/bot.ts
+@@ -120,18 +120,7 @@ export default class Bot {
+    * @param chatId - chat id to send message to
+    */
+   private async replyStartMessage(chatId: number): Promise<void> {
+-    await this.bot!.sendMessage(chatId, 'Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨', {
+-      reply_markup: {
+-        inline_keyboard: [
+-          [{
+-            text: `🦄 Open ${this.config.appName}`,
+-            web_app: {
+-              url: this.config.webAppUrl,
+-            },
+-          }],
+-        ],
+-      }
+-    });
++    await this.bot!.sendMessage(chatId, 'Welcome to the hotel booking bot! Hope you enjoy the application I have 🏨');
+   }
+
+   /**

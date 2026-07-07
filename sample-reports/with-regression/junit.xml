@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tg-qa" tests="7" failures="3">
+  <testcase name="tc-t1-start-shows-welcome-text-with-mini-app-button.yaml::TC-T1"><failure>step 1: no button containing '🦄 Open' on keyboard []</failure></testcase>
+  <testcase name="tc-t2-help-explains-the-bot-and-offers-the-mini-app-button.yaml::TC-T2"/>
+  <testcase name="tc-t3-arbitrary-plain-text-is-answered-with-app-launch-prompt.yaml::TC-T3"/>
+  <testcase name="tc-t4-repeated-start-is-idempotent.yaml::TC-T4"><failure>step 1: no button containing '🦄 Open' on keyboard []</failure></testcase>
+  <testcase name="tc-t5-unknown-command-falls-back-to-app-launch-prompt.yaml::TC-T5"/>
+  <testcase name="tc-t6-button-on-an-old-start-message-remains-usable-after-new-acti.yaml::TC-T6"><failure>step 1: no button containing '🦄 Open' on keyboard []</failure></testcase>
+  <testcase name="tc-t7-free-text-sent-right-after-help-still-gets-the-app-prompt.yaml::TC-T7"/>
+</testsuite>

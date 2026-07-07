@@ -1,0 +1,25 @@
+{
+  "healed": [],
+  "product_bugs": [
+    {
+      "tc": "TC-T1",
+      "spec": "tc-t1-start-shows-welcome-text-with-mini-app-button.yaml",
+      "status": "product-bug",
+      "reason": "The /start reply arrived with the correct welcome text but an empty inline keyboard (keyboard []), missing the required \"🦄 Open {appName}\" web_app button defined at server/src/api/bot.ts:115."
+    },
+    {
+      "tc": "TC-T4",
+      "spec": "tc-t4-repeated-start-is-idempotent.yaml",
+      "status": "product-bug",
+      "reason": "the live bot's /start reply arrived with an empty keyboard ([]), missing the required \"🦄 Open {appName}\" web_app inline button that the source (server/src/api/bot.ts:115) and TC-T4 expect on every welcome message."
+    },
+    {
+      "tc": "TC-T6",
+      "spec": "tc-t6-button-on-an-old-start-message-remains-usable-after-new-acti.yaml",
+      "status": "product-bug",
+      "reason": "the bot's `/start` reply \"Welcome to the hotel booking bot!...\" arrived with an empty keyboard ([]), missing the \"🦄 Open {appName}\" web_app button that the source (server/src/api/bot.ts:115) attaches — without it the test's core intent (clicking the button on the old /start message) is unachievable."
+    }
+  ],
+  "failed_to_heal": [],
+  "dry_run": true
+}

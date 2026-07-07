@@ -21,6 +21,25 @@ unknown commands fall back to the app-launch prompt; the button survives new act
 help reply is never edited in place. The Mini App renders its real booking UI in headless
 chromium ([sample-reports/miniapp.png](sample-reports/miniapp.png)).
 
+## Catching a regression
+
+A QA tool is only worth as much as the bugs it catches, so the demo ships one. Apply the
+included regression and watch tg-qa isolate it:
+
+```bash
+git -C "$TELEBOOK_SRC" apply patches/regression-drop-start-button.patch   # drop the Mini App button from /start
+( cd "$TELEBOOK_SRC/server" && yarn build )                                # rebuild & restart the stand
+tg-qa-run --project telebook --junit                                       # 4/7 — TC-T1/T4/T6 fail
+tg-qa-maintain --project telebook --dry-run                                # verdict: PRODUCT-BUG
+```
+
+Result (committed under [sample-reports/with-regression/](sample-reports/with-regression/)):
+**exactly the 3 test cases that touch the `/start` button fail** — help, plain-text and
+unknown-command paths stay green — each with the real dialog attached
+(`no button containing '🦄 Open' on keyboard []`). `tg-qa-maintain` does **not** heal the
+specs into green: it returns a **PRODUCT-BUG** verdict per failure, pointing at
+`server/src/api/bot.ts:115` — the tool refuses to green-wash a broken bot.
+
 ## Findings (real bugs surfaced while wiring the demo)
 
 - **`IS_TEST_ENVIRONMENT` conflates two concerns** in upstream Telebook — "listen on a local
